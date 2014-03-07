@@ -1,0 +1,16 @@
+{
+  "name": "betteroo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Betteroo, better stuff",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gokul Reddy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^3.4.8",
+    "mustache-express": "^1.0.1"
+  }
+}

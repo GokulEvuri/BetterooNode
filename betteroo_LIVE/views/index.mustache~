@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Betteroo</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link href="tools/style.css" rel="stylesheet" type="text/css" />
+<link href="tools/960.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Oswald:700,300|PT+Sans+Caption' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Crete+Round|Parisienne' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="shim"></div>
+<div id="content">
+	<div class="watch"></div>
+	<div class="rest">
+		<h1>BETTEROO</h1>
+		<div class="clear"></div>
+		<h2><span>our website is</span><br/>Coming Soon</h2>
+		<p>In the mean time connect with us with the information provided</p>
+		
+		<ul class="social">
+			<li><a href="#" class="fb"></a></li>
+			<li><a href="#" class="tw"></a></li>
+			<li><a href="#" class="li"></a></li>
+		</ul>
+		
+		<ul class="info">
+			<li class="ph">+46-73-6789-290</li>
+			<li class="ad">Holtermansgatan 1, 411 29, Göteborg</li>
+			<li class="mail"><a href="mailto:gokul@betteroo.com">info@betteroo.com</a></li>
+		</ul>
+	</div>
+</div>
+
+ <div id="footer">
+ 	<h4><span>Copyright © 2014 Betteroo | Design: <a rel="nofollow" href="http://www.linkedin.com/profile/view?id=116588982" target="_blank">Gokul S E</a></</span></h4>
+ </div>
+
+</body>
+</html>
