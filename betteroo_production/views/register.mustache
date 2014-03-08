@@ -23,6 +23,14 @@
              js.src = "//connect.facebook.net/en_US/all.js";
              fjs.parentNode.insertBefore(js, fjs);
            }(document, 'script', 'facebook-jssdk'));
+
+	  function facebookRegistrationShow(obj){
+	  if (obj.style.display == "none")
+	  obj.style.display = "";
+	  else
+	  obj.style.display = "none";
+	  }
+
         </script>
       <div id="register">
       <form method="post" action="">
@@ -50,7 +58,15 @@
             <input type="submit" id="register" value="Register" name="submit" />
           </p>
       </form>
-      <fb:registration redirect_uri="http://www.betteroo.com", fields="name,birthday,gender,location,email,first_name,last_name" />
+
+      <input type="button" id="registerFB" value="Register Using Facebook"  onClick="facebookRegistrationShow(fbRegistrationShow)" name="registerFB"  />
+
+      <div  id="fbRegistrationShow" style="visibility:none" >
+	<fb:registration redirect_uri="http://www.betteroo.com", fields="name,birthday,gender,location,email,first_name,last_name" />
+      </div>
+
+
+      
   
   </div><!--end login-->
   </body>
