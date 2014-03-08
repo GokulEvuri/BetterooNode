@@ -13,3 +13,7 @@ Developing directory (Working Directory), can take features from test, from here
 
 betteroo_test/  [Port,8070]
 to test out new features.
+
+
+TODO
+Merge everything in to one folder and start branching with naming same as directories
