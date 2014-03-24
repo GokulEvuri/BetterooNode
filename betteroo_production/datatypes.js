@@ -19,6 +19,3 @@ var User = {
 	name_of_company: "value",
 	location: "value"
 };
-
-
-
