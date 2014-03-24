@@ -7,6 +7,11 @@ AWS.config.update({
   region: 'eu-west-1'
 });
 
+
+var params = {
+	TableName: 'users'
+};
+
 var dynamodb = new AWS.DynamoDB();
 dynamodb.describeTable(params, function (err, data) {
   if (err) console.log(err, err.stack); // an error occurred
