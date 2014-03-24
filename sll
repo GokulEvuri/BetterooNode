@@ -1,0 +1,53 @@
+[33mcommit 0115123b5938d8e6cac2b8391b6ea3d77c2685dc[m
+Author: Gokul Evuri <gokul@evuri.com>
+Date:   Wed Mar 12 14:16:47 2014 +0100
+
+    adding home page
+
+[33mcommit 6d675ea9b7097386d60260c179013775aaa5f836[m
+Author: Gokul <gokul@evuri.com>
+Date:   Tue Mar 11 16:59:50 2014 +0100
+
+    adding express initialization
+
+[33mcommit ad6aa15906af792c4d262ce74ef407d5780da12f[m
+Author: Gokul <gokul@evuri.com>
+Date:   Tue Mar 11 01:16:39 2014 +0100
+
+    refactring, to single directory
+
+[33mcommit 3fe574ea5ee6f234b5b4591a05182178b2b73aed[m
+Author: Gokul Evuri <gokul@evuri.com>
+Date:   Sat Mar 8 20:38:41 2014 +0000
+
+    Read me updated
+
+[33mcommit 3e992c767a44839763a4077c039a5ebca6131b6a[m
+Author: Gokul Evuri <gokul@evuri.com>
+Date:   Sat Mar 8 19:47:01 2014 +0000
+
+    button toggle view facebook registration enabled
+
+[33mcommit 7460eb959ce75f6b9bd1dabafb24c57d12179dcd[m
+Author: Gokul Evuri <gokul@evuri.com>
+Date:   Sat Mar 8 19:02:10 2014 +0000
+
+    facebook registration on register page, production
+
+[33mcommit 3283cba25e7a3edca8adf4ceb866d8594a77811d[m
+Author: Gokul Evuri <gokul@evuri.com>
+Date:   Sat Mar 8 18:55:12 2014 +0100
+
+    adding login and register pages for production
+
+[33mcommit da0ec4f0ef2972778205447267486b5b0d11d882[m
+Author: Gokul Evuri <gokul@evuri.com>
+Date:   Sat Mar 8 16:15:54 2014 +0000
+
+    updated
+
+[33mcommit 920015b77cbf60cb63d192bfce8b1aa6278bec8e[m
+Author: Ubuntu <ubuntu@ip-172-31-10-211.us-west-2.compute.internal>
+Date:   Fri Mar 7 16:32:41 2014 +0000
+
+    Initial Commit
