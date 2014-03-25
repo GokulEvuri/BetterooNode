@@ -65,7 +65,6 @@ function myFunction(req) {
       res.end();
       }
   });
-  return next();
  }
 
 myFunction("hello");
