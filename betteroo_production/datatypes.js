@@ -28,6 +28,8 @@ var user = {
 
 
 var post = {
+	post_created_on: "value", // Date created on
+	post_heading: "value",  
 	post_id: "value", // Unique id for each post
 	post_images_refs: {}, // Image reference links on S3
 	post_options_count: "value", // Integer, how many options available in post
@@ -36,8 +38,8 @@ var post = {
 };
 
 var post_stats = {
-	user_id: "value",
-	time_of_response: "value",
+	user_id: "value", // user of choosen option [this option]:::: USE CASE, if user_id: 123 chooses this option, here it will be 123
+	time_of_response: "value", // time stamp when option choosen
 	ip_of_user: "value" 
 }
 
@@ -45,3 +47,8 @@ var post_stats = {
 ¨var post_struct = JSON.stringify(post);
 ¨var post_stats_struct = JSON.stringify(post_stats);
 ¨var choosen_users_struct = JSON.stringify(choosen_users);
+
+module.exports.user_struct = user_struct;
+module.exports.post_struct = post_struct;
+module.exports.post_stats_struct = post_stats_struct;
+module.exports.choosen_users_struct = choosen_users_struct;
