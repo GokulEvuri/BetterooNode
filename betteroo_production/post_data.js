@@ -28,8 +28,44 @@ var dataput = {
        }
   };
 
-dynamodb.putItem( dataput, function(err, result) {
+function test(){
+  dynamodb.putItem( dataput, function(err, result) {
 	if(err) console.log(err,err.stack);
-	else	console.log(result)});
-//*result.on('data', function(chunk){
-//*      console.log(""+chunk);*//
+	else	
+	result.on('data', function(chunk){console.log(""+chunk);});
+});
+};
+
+function myFunction(req, res, next) {
+  var params = {
+    TableName : 'myTable',
+    KeyConditions : 
+      {
+        "number" : 
+          {
+            "AttributeValueList" : [
+              {
+                "S" : req.params.simethingid
+              }
+            ],
+            "ComparisonOperator" : "EQ"
+          }
+      }
+  }
+
+  db.query(params, function(err, data) {
+    if (err) {
+      console.log(err);
+      } 
+    else {
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/plain; charset=UTF-8');
+      res.send(JSON.stringify(data, undefined, 2));
+      console.log(JSON.stringify(data, undefined, 2))
+      res.end();
+      }
+  });
+  return next();
+ }
+
+server.get('/searchme/:somethingid', myFunction);
