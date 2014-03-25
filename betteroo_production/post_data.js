@@ -41,13 +41,7 @@ function myFunction(req) {
     TableName : 'users',
     KeyConditions : 
       {
-        "Item" : 
-          {
-            "userID":{
-
-              "S":"3"
-            },
-
+        
           "AttributeValueList" : [
             {
               "S" : req
