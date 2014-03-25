@@ -22,9 +22,9 @@ dynamodb.putItem(
 {
      "TableName":"users",
         "Item":{
-            "userID":{"N":"1"},
+            "userID":{"S":"1"},
            "name":{"S":"Gokul"},
-           "password":{"N":"2"},
+           "password":{"S":"27cc6994fc1c01ce6659c6bddca9b69c4c6a9418065e612c69d110b3f7b11f8a"},
         "LastName":{"S":"Evuri"}
        }
   }, function(result) 
