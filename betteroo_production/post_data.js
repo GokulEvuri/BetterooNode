@@ -63,11 +63,7 @@ function myFunction(req) {
       console.log(err);
       } 
     else {
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'text/plain; charset=UTF-8');
-      res.send(JSON.stringify(data, undefined, 2));
       console.log(JSON.stringify(data, undefined, 2))
-      res.end();
       }
   });
  }
