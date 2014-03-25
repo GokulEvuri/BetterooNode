@@ -36,10 +36,6 @@ var post = {
 };
 
 var post_stats = {
-	stats_choosen_users: {}
-};
-
-var choosen_users = {
 	user_id: "value",
 	time_of_response: "value",
 	ip_of_user: "value" 
