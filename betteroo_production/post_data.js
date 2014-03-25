@@ -53,7 +53,7 @@ function myFunction(req) {
       }
   }
 
-  db.query(params, function(err, data) {
+  dynamodb.query(params, function(err, data) {
     if (err) {
       console.log(err);
       } 
