@@ -50,7 +50,6 @@ function myFunction(req) {
             "ComparisonOperator" : "EQ"
           }
       }
-  }
 
   dynamodb.query(params, function(err, data) {
     if (err) {
