@@ -18,7 +18,7 @@ dynamodb.describeTable(params, function (err, data) {
   else     console.log(data);           // successful response
 });
 
-dynamoDB.putItem(
+dynamodb.putItem(
 {
      "TableName":"users",
         "Item":{
