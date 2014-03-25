@@ -36,16 +36,16 @@ function test(){
 });
 };
 
-function myFunction(req, res, next) {
+function myFunction(req) {
   var params = {
-    TableName : 'myTable',
+    TableName : 'users',
     KeyConditions : 
       {
         "number" : 
           {
             "AttributeValueList" : [
               {
-                "S" : req.params.simethingid
+                "S" : req;
               }
             ],
             "ComparisonOperator" : "EQ"
@@ -68,4 +68,4 @@ function myFunction(req, res, next) {
   return next();
  }
 
-server.get('/searchme/:somethingid', myFunction);
+myFunction("hello");
