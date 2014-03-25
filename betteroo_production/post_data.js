@@ -41,11 +41,11 @@ function myFunction(req) {
     TableName : 'users',
     KeyConditions : 
       {
-        "number" : 
+        "Item" : 
           {
             "AttributeValueList" : [
               {
-                "S" : req;
+                "S" : req
               }
             ],
             "ComparisonOperator" : "EQ"
