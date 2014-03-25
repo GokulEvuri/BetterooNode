@@ -43,10 +43,15 @@ function myFunction(req) {
       {
         "Item" : 
           {
-            "AttributeValueList" : [
-              {
-                "S" : req
-              }
+            "userID":{
+
+              "S":"3"
+            },
+
+          "AttributeValueList" : [
+            {
+              "S" : req
+            }
             ],
             "ComparisonOperator" : "EQ"
           }
