@@ -33,5 +33,3 @@ dynamodb.putItem( dataput, function(err, result) {
 	else	console.log(result)});
 //*result.on('data', function(chunk){
 //*      console.log(""+chunk);*//
-});
-console.log(" Item are succesfully intest in table .................."); 
