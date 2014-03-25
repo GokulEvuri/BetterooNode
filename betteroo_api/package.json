@@ -36,9 +36,6 @@
   "scripts": {
     "test": "make test"
   },
-  "engines": {
-    "node": ">= 0.8.0"
-  },
   "license": "Betteroo License 0.0.1",
   "readmeFilename": "Readme.md",
   "bugs": {
