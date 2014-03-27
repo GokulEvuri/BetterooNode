@@ -21,6 +21,7 @@ dynamodb.describeTable(params, function (err, data) {
 var dataput = {
      "TableName":"users",
         "Item":{
+          "user_name":{"S":"3"},
             "userID":{"S":"3"},
            "name":{"S":"Evuri"},
            "password":{"S":"27cc6994fc1c01ce6659c6bddca9b69c4c6a9418065e612c69d110b3f7b11f8a"},
@@ -32,7 +33,7 @@ function test(){
   dynamodb.putItem( dataput, function(err, result) {
 	if(err) console.log(err,err.stack);
 	else	
-	result.on('data', function(chunk){console.log(""+chunk);});
+	console.log(result);
 });
 };
 
@@ -68,18 +69,36 @@ function test_register_user(username,email,f_name,l_name,pass_hash){
             "TableName":"users",
               "Item":{
               "user_name":{"S": username},
+              "email":{"S":email},
               "f_name":{"S":f_name},
+              "l_name":{"S":l_name},
               "password":{"S":pass_hash},
-              "l_name":{"S":l_name}
+              "created":{"N": new Date().getTime().toString()}
+              
+            },
+            "Expected":{
+              "user_name":{
+                "Exists":false,
+                "Value":{
+                  "S":username
+                }
+              },
+              "email":{
+                "Exists":false,
+                "Value":{
+                  "S":email
+                }
+              }
             }
         }
 
-  dynamodb.putItem( dataput, function(err, result) {
+  dynamodb.putItem( user, function(err, result) {
     if(err) console.log(err,err.stack);
       else  
-      result.on('data', function(chunk){console.log(""+chunk);});
+      console.log(result);
   });
 
 };
 
 test_register_user("Gokul","gokul.evuri@gmail.com","Gokul","Evuri","27cc6994fc1c01ce6659c6bddca9b69c4c6a9418065e612c69d110b3f7b11f8a");
+//test();

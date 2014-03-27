@@ -6,16 +6,26 @@ function register_user(username,email,f_name,l_name,pass_hash,dynamodb){
 				    "TableName":"users",
 				    	"Item":{
 							"user_name":{"S": username},
+							"email":{"S":email},
 							"f_name":{"S":f_name},
-							"password":{"S":pass_hash},
-							"l_name":{"S":l_name}
+							"l_name":{"S":l_name},
+							"password":{"S":pass_hash}
+							
+						}
+						"Expected":{
+							"user_name":{
+								"Exists":false
+							},
+							"email":{
+								"Exists":false
+							}
 						}
 				}
 
-	dynamodb.putItem( dataput, function(err, result) {
+	dynamodb.putItem( user, function(err, result) {
 		if(err) console.log(err,err.stack);
 			else	
-			result.on('data', function(chunk){console.log(""+chunk);});
+			console.log(""+chunk);
 	});
 
 };
