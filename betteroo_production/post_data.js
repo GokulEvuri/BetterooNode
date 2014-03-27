@@ -61,4 +61,25 @@ function myFunction(req) {
   });
  }
 
-myFunction("hello");
+//myFunction("hello");
+
+function test_register_user(username,email,f_name,l_name,pass_hash){
+  var user =  {
+            "TableName":"users",
+              "Item":{
+              "user_name":{"S": username},
+              "f_name":{"S":f_name},
+              "password":{"S":pass_hash},
+              "l_name":{"S":l_name}
+            }
+        }
+
+  dynamodb.putItem( dataput, function(err, result) {
+    if(err) console.log(err,err.stack);
+      else  
+      result.on('data', function(chunk){console.log(""+chunk);});
+  });
+
+};
+
+test_register_user("Gokul","gokul.evuri@gmail.com","Gokul","Evuri","27cc6994fc1c01ce6659c6bddca9b69c4c6a9418065e612c69d110b3f7b11f8a");
