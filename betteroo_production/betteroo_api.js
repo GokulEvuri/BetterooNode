@@ -22,7 +22,7 @@ function register_user(username,email,f_name,l_name,pass_hash,dynamodb){
   });
 };
 
-function username_available(username){
+function is_uname_unieque(username){
 	
 };
 
@@ -34,13 +34,5 @@ function create_user(userobject){
 };
 
 
-//**** Data Holders ****//
-var dataput = {
-     "TableName":"users",
-        "Item":{
-            "userID":{"S":"3"},
-           "name":{"S":"Evuri"},
-           "password":{"S":"27cc6994fc1c01ce6659c6bddca9b69c4c6a9418065e612c69d110b3f7b11f8a"},
-        "LastName":{"S":"Gokul"}
-       }
-  };
+exports.register_user = register_user; //public function
+exports.is_uname_unieque = is_uname_unieque; //public function

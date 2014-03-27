@@ -23,9 +23,8 @@ app.use(app.router);
 // or       POST: {"name":"foo","color":"red"}  <-- JSON encoding
 
 app.post('/register', function(req, res) {
-    var name = req.body.name,
-        color = req.body.color;
-    // ...
+    console.log(req.body.name);
+    console.log(req.body.color); 
 });
 
 app.listen(8090, function () {
