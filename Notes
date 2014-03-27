@@ -1,0 +1,3 @@
+functio register_user(4) in betteroo_api.js
+	last argument should be a dynamodb instance referance variable
+	

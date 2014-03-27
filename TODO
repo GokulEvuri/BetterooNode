@@ -1,2 +1,4 @@
-DataBase
-	Create a quesandra cluster for username availability checking funtion??? Do i need that??
+functio register_user(4) in betteroo_api.js
+	do functions to check if available user_name and email [check if they are unique]
+
+

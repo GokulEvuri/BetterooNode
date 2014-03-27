@@ -1,46 +1,18 @@
 {
-  "name": "betteroo_api",
-  "description": "Betteroo, better stuff",
-  "version": "0.0.1",
-  "author": {
-    "name": "Gokul S Evuri",
-    "email": "gokul.evuri@gmail.com"
-  },
-  "contributors": [
-    {
-      "name": "Gokul S Evuri",
-      "email": "gokul.evuri@gmail.com"
-    }
-  ],
-  "dependencies": {
-    "aws-sdk": "*",
-    "express": "^3.4.8"
-  },
-  "devDependencies": {
-    
-  },
-  "keywords": [
-    "betteroo"
-    "express",
-    "framework",
-    "web",
-    "rest",
-    "restful",
-    "app",
-    "api"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/GokulEvuri/BetterooNode"
-  },
+  "name": "betteroo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Betteroo, api server",
+  "main": "app.js",
   "scripts": {
-    "test": "make test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "Betteroo License 0.0.1",
-  "readmeFilename": "Readme.md",
-  "bugs": {
-    "url": "https://github.com/GokulEvuri/BetterooNode/issues"
-  },
-  "homepage": "https://github.com/GokulEvuri/BetterooNode",
+  "author": "Gokul Reddy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^3.4.8",
+    "mustache-express": "^1.0.1",
+    "aws-sdk":"*"
+
+  }
 }
-  
