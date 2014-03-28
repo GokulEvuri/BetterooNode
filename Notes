@@ -1,3 +1,10 @@
 functio register_user(4) in betteroo_api.js
 	last argument should be a dynamodb instance referance variable
 	
+
+
+Test commands
+	Tested register function with
+		curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"name":"Gokul","color":"Red"}'  http://localhost:8090/register/
+	Login Function
+		 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"username":"Gokul","pass_hash":"Red"}'  http://localhost:8090/login/

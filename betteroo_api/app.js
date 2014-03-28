@@ -3,7 +3,7 @@
 var express = require('express');
 var app = express();
 var AWS = require('aws-sdk');
-var lib_api = require('/lib/betteroo_api');
+var lib_api = require('./lib/betteroo_api');
 
 //**
 // AWS Configuring
@@ -23,10 +23,15 @@ app.use(app.router);
 // or       POST: {"name":"foo","color":"red"}  <-- JSON encoding
 
 app.post('/register', function(req, res) {
-	
+
     console.log(req.body.name);
     console.log(req.body.color); 
 });
+
+app.post('/login', function(req, res) {
+	lib_api.login(req.body.username,req.body.pass_hash,dynamodb);
+});
+
 
 app.listen(8090, function () {
   console.log("starting server");
