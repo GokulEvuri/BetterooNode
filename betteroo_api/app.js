@@ -29,7 +29,9 @@ app.post('/register', function(req, res) {
 });
 
 app.post('/login', function(req, res) {
-	lib_api.login(req.body.username,req.body.pass_hash,dynamodb);
+	var skjds = lib_api.login(req.body.username,req.body.pass_hash,dynamodb,res);
+	//console.log(skjds);
+	//res.json(skjds);
 });
 
 

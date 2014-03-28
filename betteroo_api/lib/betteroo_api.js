@@ -26,9 +26,9 @@ function is_uname_unieque(username){
 	
 };
 
-
 //login
-function login(username, pass_hash, dynamodb){
+function login(username, pass_hash, dynamodb,res){
+
 	var item = {
 		"Key": {
 			"user_name": {"S":username}
@@ -37,15 +37,21 @@ function login(username, pass_hash, dynamodb){
 		"AttributesToGet":[ "password"
 		]
 	}
-	dynamodb.getItem(item,function(err,data){
-		if(err)console.log(err,err.stack);
-			else
-			console.log(data);
-	});
+	dynamodb.getItem(item,handle_login);
+
+
+function handle_login(err,data){
+		if(err)
+			console.log(err,err.stack);
+		else
+			console.log("ok");
+		var login_bool=(data.Item.password.S==pass_hash)?"true":"false";
+			console.log("22 "+login_bool);
+			res.json(login_bool);
+			res.end();		
+}
 
 };
-
-
 //**** LOW-LEVEL FUNCTIONS ****//
 
 // to create a new user in database
