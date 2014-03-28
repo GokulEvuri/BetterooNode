@@ -1,9 +1,9 @@
 // Author: Gokul Sai Evuri (gokul@betteroo.com)
 
-var express = require("express");
+var express = require('express');
 var app = express();
 var AWS = require('aws-sdk');
-
+var lib_api = require('/lib/betteroo_api');
 
 //**
 // AWS Configuring
@@ -23,6 +23,7 @@ app.use(app.router);
 // or       POST: {"name":"foo","color":"red"}  <-- JSON encoding
 
 app.post('/register', function(req, res) {
+	
     console.log(req.body.name);
     console.log(req.body.color); 
 });
