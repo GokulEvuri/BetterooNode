@@ -29,10 +29,20 @@ app.post('/register', function(req, res) {
 });
 
 app.post('/login', function(req, res) {
-	var skjds = lib_api.login(req.body.username,req.body.pass_hash,dynamodb,res);
+	lib_api.login(req.body.username,req.body.pass_hash,dynamodb,res);
 	//console.log(skjds);
 	//res.json(skjds);
 });
+
+
+app.post('map_distribution',function(req,res){
+	lib_api.login(req.body.post_id, dynamodb, res);
+});
+
+app.post('map_distribution',function(req,res){
+	lib_api.login(req.body.post_id, dynamodb, res);
+});
+
 
 
 app.listen(8090, function () {
