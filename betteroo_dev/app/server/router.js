@@ -81,6 +81,22 @@ module.exports = function(app) {
 			req.session.destroy(function(e){ res.send('ok', 200); });
 		}
 	});
+
+
+// settings page//
+
+app.get('/settings', function(req, res) {
+	    if (req.session.user == null){
+	// if user is not logged-in redirect back to login page //
+	        res.redirect('/');
+	    }   else{
+			res.render('home', {
+				title : 'Control Panel',
+				countries : CT,
+				udata : req.session.user
+			});
+	    }
+	});
 	
 // creating new accounts //
 	
@@ -181,6 +197,8 @@ module.exports = function(app) {
 			res.redirect('/print');	
 		});
 	});
+
+
 	
 	app.get('*', function(req, res) { res.render('404', { title: 'Page Not Found'}); });
 
