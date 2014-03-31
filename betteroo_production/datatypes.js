@@ -17,15 +17,15 @@ var user = {
 	user_twitter_id: "value", 
 	is_prof: "value", // Is a paid user or belongs to paid company
 	name_of_company: "value",
-	location: "value", 
-	followers:{}, // Should contain user_id
-	following:{}  // Should contain user_id
+	location: "value"
+	
+
 };
 
 var dynamic_user = {
 	posts_own:{} // Should contain post_id of posts
 	user_ip_history: {}, // Ip adresses of user activity
-	last_login:{}, // time stamp of last login
+	last_login:{} // time stamp of last login
 };
 
 

@@ -12,6 +12,7 @@ AWS.config.loadFromPath('./config.json');
 
 // Creating object for dynamoDB
 var dynamodb = new AWS.DynamoDB();
+var S3 = new AWS.S3();
 // AWS Config. END
 
 app.use(express.logger('dev'));
@@ -34,6 +35,9 @@ app.post('/login', function(req, res) {
 	//res.json(skjds);
 });
 
+app.post('/create_poll',function(req,res){
+	lib_api.create_poll(req.body.question, req.body.option1,req.body.option2, dynamodb, res);
+});
 
 app.post('map_distribution',function(req,res){
 	lib_api.login(req.body.post_id, dynamodb, res);

@@ -52,7 +52,47 @@ function handle_login(err,data){
 }
 
 };
+
+
+function create_poll(question,option1,option2,dynamodb,res){
+	var user =  {
+            "TableName":"polls",
+              "Item":{
+              "poll_id":{"N": new poll_id()},
+              "question":{"S":question},
+              "option1":{"S":option1},
+              "option2":{"S":option2},
+              "created":{"N": new Date().getTime().toString()}
+              
+            }
+        }
+
+  dynamodb.putItem( user, function(err, result) {
+    if(err) console.log(err,err.stack);
+      else  
+      console.log(result);
+  });	
+	res.write("poll created");
+	res.end();
+};
+
+
+function upload_image(){
+
+}
+
 //**** LOW-LEVEL FUNCTIONS ****//
+
+function poll_id(){
+  if(poll_id.count == undefined){
+    poll_id.count = 1;
+  }
+  else{
+    poll_id.count ++;
+  }
+  console.log(poll_id.count);
+}
+
 
 // to create a new user in database
 function create_user(userobject){

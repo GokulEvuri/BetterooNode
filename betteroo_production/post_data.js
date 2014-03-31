@@ -1,3 +1,7 @@
+/// Testing file for functions
+
+
+
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 
@@ -13,6 +17,9 @@ var params = {
 };
 
 var dynamodb = new AWS.DynamoDB();
+
+var s3 = new AWS.S3();
+
 dynamodb.describeTable(params, function (err, data) {
   if (err) console.log(err, err.stack); // an error occurred
   else     console.log(data);           // successful response
@@ -100,5 +107,22 @@ function test_register_user(username,email,f_name,l_name,pass_hash){
 
 };
 
-test_register_user("Gokul","gokul.evuri@gmail.com","Gokul","Evuri","27cc6994fc1c01ce6659c6bddca9b69c4c6a9418065e612c69d110b3f7b11f8a");
+
+function upload_image(){
+  var params = {Bucket: 'betteroo-images', Key: 'myKey1', Body: 'World!'};
+
+  s3.putObject(params, function (perr, pres) {
+            if (perr) {
+                console.log("Error uploading data: ", perr);
+            } else {
+                console.log("Successfully uploaded data to myBucket/myKey");
+            }
+          });
+        };
+
+
+
+//test_register_user("Gokul","gokul.evuri@gmail.com","Gokul","Evuri","27cc6994fc1c01ce6659c6bddca9b69c4c6a9418065e612c69d110b3f7b11f8a");
 //test();
+
+upload_image();
