@@ -90,7 +90,7 @@ app.get('/settings', function(req, res) {
 	// if user is not logged-in redirect back to login page //
 	        res.redirect('/');
 	    }   else{
-			res.render('home', {
+			res.render('settings', {
 				title : 'Control Panel',
 				countries : CT,
 				udata : req.session.user
