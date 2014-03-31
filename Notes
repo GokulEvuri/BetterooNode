@@ -8,3 +8,6 @@ Test commands
 		curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"name":"Gokul","color":"Red"}'  http://localhost:8090/register/
 	Login Function
 		 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"username":"Gokul","pass_hash":"Red"}'  http://localhost:8090/login/
+
+	Create Poll Function
+		curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"question":"Gokul","option1":"Red", "option1":"Blue"}'http://localhost:8090/create_poll/

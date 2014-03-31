@@ -1,10 +1,10 @@
 // Author: Gokul Sai Evuri (gokul@betteroo.com)
 
-//var express = require("express");
-//var app = express();
+var express = require("express");
+var app = express();
 var AWS = require('aws-sdk');
 
-//var mustacheExpress = require('mustache-express');
+var mustacheExpress = require('mustache-express');
 
 //**
 // AWS Configuring
@@ -17,38 +17,41 @@ var dynamodb = new AWS.DynamoDB();
 
 
 // Register '.mustache' extension with The Mustache Express
-//app.engine('mustache', mustacheExpress());
+app.engine('mustache', mustacheExpress());
 
-//app.set('view engine', 'mustache');
-//app.set('views', __dirname + '/views');
+app.set('view engine', 'mustache');
+app.set('views', __dirname + '/views');
 
-//app.use("/tools", express.static(__dirname + '/tools'));
-//app.use("/images", express.static(__dirname + '/images'));
+app.use("/tools", express.static(__dirname + '/tools'));
+app.use("/images", express.static(__dirname + '/images'));
 
-//app.get("/", function (req, res) {
-//  res.render('index');
-//});
-//app.get("/login", function (req, res) {
-//  res.render('login');
-//});
-//app.get("/register", function (req, res) {
-//  res.render('register');
-//});
+app.get("/", function (req, res) {
+  res.render('index');
+});
 
-//app.listen(8090, function () {
-//  console.log("starting server");
-//});
+app.get("/login", function (req, res) {
+  res.render('login');
+});
 
-var item = {
-	"id":{"N":1234},
-	"title":{"S":"FooBar"}
+app.get("/register", function (req, res) {
+  res.render('register');
+});
 
-}
+app.post('/login', function(req, res) {
+	console.log(req.post);
+	res.end();
+	//console.log(req.body.username);
+    //console.log(req.body.pwd);	
 
-dynamodb.putItem({TableName: 'log_dev', Item: item}, function(err, data){
-    if (err) {
-    console.log(err); // an error occurred
-    } else {
-    console.log(data); // successful response
-    }
+	//lib_api.login(req.body.username,req.body.pass_hash,dynamodb,res);
+});
+
+app.post('/register', function(req, res) {
+//	lib_api.register_user(req.body.username,);
+    console.log(req.body.name);
+    console.log(req.body.color); 
+});
+
+app.listen(8090, function () {
+  console.log("starting server");
 });

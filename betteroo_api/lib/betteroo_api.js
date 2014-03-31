@@ -55,10 +55,10 @@ function handle_login(err,data){
 
 
 function create_poll(question,option1,option2,dynamodb,res){
-	var user =  {
+	var poll_var =  {
             "TableName":"polls",
               "Item":{
-              "poll_id":{"N": new poll_id()},
+              "poll_id":{"S": "1"},
               "question":{"S":question},
               "option1":{"S":option1},
               "option2":{"S":option2},
@@ -67,7 +67,7 @@ function create_poll(question,option1,option2,dynamodb,res){
             }
         }
 
-  dynamodb.putItem( user, function(err, result) {
+  dynamodb.putItem( poll_var, function(err, result) {
     if(err) console.log(err,err.stack);
       else  
       console.log(result);
@@ -77,7 +77,7 @@ function create_poll(question,option1,option2,dynamodb,res){
 };
 
 
-function upload_image(){
+function upload_image(req,s3){
 
 }
 
@@ -103,3 +103,4 @@ function create_user(userobject){
 exports.register_user = register_user; //public function
 exports.is_uname_unieque = is_uname_unieque; //public function
 exports.login = login;
+exports.create_poll = create_poll;
