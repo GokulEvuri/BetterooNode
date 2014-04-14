@@ -1,0 +1,16 @@
+app.js
+	Application entry point, to load configuration files and so
+config.json
+	Configuraton file containing access keys for Amazon web servises (AWS)
+package.json
+	JSON file containing application discription, version, dependencies and all
+./node_modules
+	Ignore this directory, automatically downloaded for resolving dependencies of the application.
+./app
+	Application development directory <- all the code goes here
+	./public
+		Can also be mostly Ignored, expect for 'js' folder, contains 'twitter bootstrap', jquery and other scripts, public images, css styling sheets, jade pages for login and registration systems
+		./js
+		Javascript files, can make scence with file names
+	./server
+		All most all the application logic and routings will be here 
